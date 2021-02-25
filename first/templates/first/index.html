@@ -1,0 +1,13 @@
+{% extends 'first/base.html' %}
+{% load static %}
+{% block content %}
+    <p>Hello World!</p>
+
+    <img src="{% static 'first/image.png' %}" alt="이미지" />
+
+    <p>{{ current_date }}</p>
+    <p>{{ current_date | date:"Y년 m월 d일 H시 i분 s초" }}</p>
+
+    <!-- 권장 urls.py 에 선언한 name -->
+    <a href="{% url 'select' %}">시작하기!</a>
+{% endblock %}
